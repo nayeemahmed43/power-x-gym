@@ -1,0 +1,129 @@
+
+
+.home{
+    background-image: url('../../images/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg');
+    background-position: center top ;
+	background-repeat:no-repeat;
+    background-size:cover;
+    height: 700px;
+    position: relative;
+    opacity: 0.90;
+    background-color: black;
+}
+.nav{
+    justify-content: space-between;
+    padding-top: 35px;
+    
+}
+.nav h3{
+    color: white;
+    margin-left: 100px;
+}
+#name{
+    color: #E8B933;
+    font-weight: bold;
+}
+.navItem{
+    color: white;
+    cursor: pointer;
+    display: flex;
+    margin-right: 60px;
+    align-items: center;
+}
+.navItem h6{
+    margin-right: 30px;
+    font-weight: 400;
+
+}
+.title{
+    text-align: left;
+    color: wheat;
+    margin-left: 100px;
+    margin-top: 145px;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+#description{
+    margin-left: 100px;
+    text-align: left;
+    width: 35%;
+    color: white;
+    font-weight: lighter;
+    font-size: small;
+}
+.join-btn{
+    margin-right: 74%;
+    width: 150px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #E5B836;
+    border: none;
+}
+.category{
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+}
+.category-box{
+    width: 320px;
+    height: 320px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid black;
+    color: white;
+    
+}
+.category-box h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    color: #E5B836;
+    
+}
+.category-box small{
+    justify-content: space-around;
+    text-align:center;
+    margin-bottom: 10px;
+    margin: auto;
+}
+#category-box1{
+    background-image:url('../../images/hipcravo-5UbIqV58CW8-unsplash.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#category-box2{
+    background-image:url('../../images/daniel-apodaca-WdoQio6HPVA-unsplash.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#category-box3{
+    background-image:url('../../images/penguinuhh-8VI6WwEEEHw-unsplash.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.mid-section{
+    margin-top: 150px;
+    display: flex;
+    padding-left: 150px;
+}
+.mid-section img{
+    width:auto; 
+    height:500px;
+    position: absolute;
+    clip: rect(0px,600px,450px,0px);    
+}
+.mid-content{
+    margin-left: 750px; 
+    width: 35%;
+    margin-top: 15px;
+    text-align: left;
+}
+.mid-content h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+.mid-content small{
+    width: 300px;
+}

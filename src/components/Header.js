@@ -15,10 +15,10 @@ const Header = () => {
                     <a href="/contact_us"><h6>Contact Us</h6></a>
                 </div>
             </nav>
-
             <div className="title">
                     <p>Our Classes</p>
                 </div>
+            
         </div>
     );
 };

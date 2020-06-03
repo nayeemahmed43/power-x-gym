@@ -6,8 +6,9 @@ const OurClasses = () => {
     return (
         <div>
             <Header></Header>
+           
 
-            <div className="row" style={{justifyContent:"center", marginBottom:"10%"}}>
+            <div className="row" style={{justifyContent:"center", marginBottom:"10%",marginTop:"10%"}}>
                 <div className="class-box" id="class-box1">
                     <div className="classes">
                         <h5>PSYCHO TRAINING &emsp;&#10132;</h5>

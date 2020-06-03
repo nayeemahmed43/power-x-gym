@@ -29,45 +29,45 @@ const Pricing = () => {
             <div className="row" style={{justifyContent:"center"}}>
 
                 <div className="priceBox" id="priceBox1">
-                    <p>BILLED MONTHLY</p>
+                    <p className="bill" style={{marginTop:"15%"}}>BILLED MONTHLY</p>
                     <h3>ADVANCED PLAN</h3>
-                    <p>$140</p>
+                    <p className="price" style={{fontSize:"5vh"}}>$140</p>
                     <div className="pricingPoint">
-                        <p>Mobile-Optimized</p>
-                        <p>Best Hosting</p>
-                        <p>Free Custom</p>
-                        <p>Outstanding</p>
-                        <p>Happy Customers</p>
+                        <p>&#10003; Mobile-Optimized</p>
+                        <p>&#10003; Best Hosting</p>
+                        <p>&#10003; Free Custom</p>
+                        <p>&#10003; Outstanding</p>
+                        <p>&#10003; Happy Customers</p>
                     </div>
-                    <button>Purchase</button>
+                    <button>PURCHASE</button>
                 </div>
 
                 <div className="priceBox" id="priceBox2">
-                     <p>BILLED MONTHLY</p>
-                    <h3>Basic PLAN</h3>
-                    <p>$120</p>
+                     <p className="bill" style={{marginTop:"15%"}}>BILLED MONTHLY</p>
+                    <h3>BASIC PLAN</h3>
+                    <p className="price" style={{fontSize:"5vh"}}>$120</p>
                     <div className="pricingPoint">
-                        <p>Mobile-Optimized</p>
-                        <p>Best Hosting</p>
-                        <p>Free Custom</p>
-                        <p>Outstanding</p>
-                        <p>Happy Customers</p>
+                        <p>&#10003; Mobile-Optimized</p>
+                        <p>&#10003; Best Hosting</p>
+                        <p>&#10003; Free Custom</p>
+                        <p>&#10003; Outstanding</p>
+                        <p>&#10003; Happy Customers</p>
                     </div>
-                    <button>Purchase</button>
+                    <button>PURCHASE</button>
                 </div>
 
                 <div className="priceBox" id="priceBox3">
-                     <p>BILLED MONTHLY</p>
+                     <p className="bill" style={{marginTop:"15%"}}>BILLED MONTHLY</p>
                     <h3>Biginners</h3>
-                    <p>$90</p>
+                    <p className="price" style={{fontSize:"5vh"}}>$90</p>
                     <div className="pricingPoint">
-                        <p>Mobile-Optimized</p>
-                        <p>Best Hosting</p>
-                        <p>Free Custom</p>
-                        <p>Outstanding</p>
-                        <p>Happy Customers</p>
+                        <p>&#10003; Mobile-Optimized</p>
+                        <p>&#10003; Best Hosting</p>
+                        <p>&#10003; Free Custom</p>
+                        <p>&#10003; Outstanding</p>
+                        <p>&#10003; Happy Customers</p>
                     </div>
-                    <button>Purchase</button>
+                    <button>PURCHASE</button>
                 </div>
             </div>
 

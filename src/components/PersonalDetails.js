@@ -157,7 +157,7 @@ const PersonalDetails = () => {
                     <div style={{marginTop: '200px', display: memberData ? 'block' : 'none'}}>
                         <h3>Payment Information</h3>
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm handlePlaceOrder={submitToDatabase}></CheckoutForm>
+                    <CheckoutForm handlePlaceOrder={membershipId}></CheckoutForm>
                 </Elements>
                 <br/>
                 {

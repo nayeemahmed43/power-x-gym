@@ -1,8 +1,10 @@
 import React from 'react';
-import Header from './Header';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
+    
+
     return (
         <div className="pricing">
             <div className="header">
@@ -39,7 +41,9 @@ const Pricing = () => {
                         <p>&#10003; Outstanding</p>
                         <p>&#10003; Happy Customers</p>
                     </div>
-                    <button>PURCHASE</button>
+                    <Link to={"/personalDetails/"+"Advanced Plan"}>
+                        <button>PURCHASE</button>
+                    </Link> 
                 </div>
 
                 <div className="priceBox" id="priceBox2">
@@ -53,7 +57,9 @@ const Pricing = () => {
                         <p>&#10003; Outstanding</p>
                         <p>&#10003; Happy Customers</p>
                     </div>
+                    <Link to={"/personalDetails/"+"Basic Plan"}>
                     <button>PURCHASE</button>
+                    </Link>
                 </div>
 
                 <div className="priceBox" id="priceBox3">
@@ -67,7 +73,9 @@ const Pricing = () => {
                         <p>&#10003; Outstanding</p>
                         <p>&#10003; Happy Customers</p>
                     </div>
+                    <Link to={"/personalDetails/"+"Beginner"}>
                     <button>PURCHASE</button>
+                    </Link>
                 </div>
             </div>
 

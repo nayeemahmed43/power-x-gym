@@ -8,6 +8,7 @@ import {
 import Home from './components/Home';
 import OurClasses from './components/OurClasses';
 import Pricing from './components/Pricing';
+import PersonalDetails from './components/PersonalDetails';
 
 function App() {
   return (
@@ -28,8 +29,12 @@ function App() {
               <Home></Home>
           </Route>
 
-          <Route exact path="/pricing">
+          <Route  path="/pricing">
               <Pricing></Pricing>
+          </Route>
+
+          <Route  path="/personalDetails/:key">
+              <PersonalDetails></PersonalDetails>
           </Route>
 
         </Switch>

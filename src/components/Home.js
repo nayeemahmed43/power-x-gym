@@ -11,6 +11,7 @@ import fb from "../images/bxl-facebook.png";
 import insta from "../images/bxl-instagram.png";
 import twitter from "../images/bxl-twitter.png";
 import wapp from "../images/bxl-whatsapp.png";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -34,7 +35,7 @@ const Home = () => {
                     <p>STUDIO IN TOWN</p>
                 </div>
                 <p id="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, vitae neque? Expedita quae doloribus eum quisquam odit corrupti reiciendis vero.Sit ipsam ut eligendi reprehenderit, aliquam molestiae voluptatem, voluptate atque nemo culpa impedit cum tempore.</p>
-                <button className="join-btn">JOIN US</button>  
+                <Link to="/pricing"><button className="join-btn">JOIN US</button></Link>  
             </div>
 
             <div className="category">

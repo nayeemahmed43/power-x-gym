@@ -13,7 +13,7 @@ const Footer = () => {
 
                 <div className="help">
                     <p style={{marginRight:"50px"}}>Need Help?</p>
-                    <div class="footer-link">
+                    <div className="footer-link">
                         <p>Help Center</p>
                         <p>Email Support</p>
                         <p>Live Chat</p>
@@ -24,7 +24,7 @@ const Footer = () => {
 
                 <div className="resource">
                     <p>Digital Resources</p>
-                    <div class="resource-link">
+                    <div className="resource-link">
                         <p>Articles</p>
                         <p>E-books</p>
                     </div>
@@ -41,7 +41,7 @@ const Footer = () => {
 
                 <div className="news">
                     <p style={{marginRight:"100px"}}>Join Our Newsletter</p>
-                    <div class="news-link">
+                    <div className="news-link">
                         <p>Get exclusive news features, and </p>
                         <p>updates from The Shredder Weight </p>
                         <p>Loss Academy</p>

@@ -121,7 +121,7 @@ const PersonalDetails = () => {
         </div>
 
         <div className="row">
-        <div style={{display: key }} className="col-md-6">
+        <div style={{display: key }} className="col-md-6 ">
           <h3>Membership Information</h3>
 
         <form className="ship-form " onSubmit={handleSubmit}>

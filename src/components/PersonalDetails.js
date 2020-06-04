@@ -24,21 +24,21 @@ const PersonalDetails = () => {
         
     //   }
 
-      // const handlePlaceOrder = (payment) =>{
-      //   const orderDetail = {MonthlyPlan: key, shipment: membershipInfo, payment: payment};
-      //   fetch('',{
-      //     method: 'POST',
-      //     headers:{
-      //         'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify(orderDetail)
-      //   })
-      //   .then(res => res.json())
-      //   .then(order => {
-      //     setOrderId(order._id);
+      const handlePlaceOrder = (payment) =>{
+        const orderDetail = {MonthlyPlan: key, shipment: membershipInfo, payment: payment};
+        fetch('',{
+          method: 'POST',
+          headers:{
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(orderDetail)
+        })
+        .then(res => res.json())
+        .then(order => {
+          setOrderId(order._id);
          
-      //   })
-      // }
+        })
+      }
 
     //dont change code below
     const [ isFormVisible, setIsFormVisible] = useState(true)
@@ -120,7 +120,7 @@ const PersonalDetails = () => {
         </div>
 
         <div className="row">
-        <div style={{display: !memberData }} className="col-md-6">
+        <div style={{display: key }} className="col-md-6">
           <h3>Membership Information</h3>
 
         <form className="ship-form " onSubmit={handleSubmit}>
@@ -154,10 +154,10 @@ const PersonalDetails = () => {
                 </div>
 
                 <div  className="col-md-6">
-                    <div style={{marginTop: '200px', display: memberData ? 'block' : 'none'}}>
+                    <div style={{marginTop: '200px', display: membershipId ? 'block' : 'none'}}>
                         <h3>Payment Information</h3>
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm handlePlaceOrder={membershipId}></CheckoutForm>
+                    <CheckoutForm handlePlaceOrder={handlePlaceOrder}></CheckoutForm>
                 </Elements>
                 <br/>
                 {

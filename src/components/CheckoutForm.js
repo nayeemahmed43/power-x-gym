@@ -23,7 +23,7 @@ const CheckoutForm = (props) => {
     }else{
         setPaymentFinished(paymentMethod);
         const payment = {id: paymentMethod.id, last4: paymentMethod.card.last4}
-        props.handlePlaceOrder(payment);
+        //props.handlePlaceOrder(payment);
         setPaymentError(null);
     }
   };

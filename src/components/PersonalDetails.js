@@ -24,21 +24,21 @@ const PersonalDetails = () => {
         
     //   }
 
-      const handlePlaceOrder = (payment) =>{
-        const orderDetail = {MonthlyPlan: key, shipment: membershipInfo, payment: payment};
-        fetch('',{
-          method: 'POST',
-          headers:{
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(orderDetail)
-        })
-        .then(res => res.json())
-        .then(order => {
-          setOrderId(order._id);
+    //   const handlePlaceOrder = (payment) =>{
+    //     const orderDetail = {MonthlyPlan: key, shipment: membershipInfo, payment: payment};
+    //     fetch('',{
+    //       method: 'POST',
+    //       headers:{
+    //           'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify(orderDetail)
+    //     })
+    //     .then(res => res.json())
+    //     .then(order => {
+    //       setOrderId(order._id);
          
-        })
-      }
+    //     })
+    //   }
 
     //dont change code below
     const [ isFormVisible, setIsFormVisible] = useState(true)
@@ -66,6 +66,7 @@ const PersonalDetails = () => {
     const handleSubmit = (e)=>{
         e.preventDefault()
         setIsFormVisible(false)
+        setMembershipType(key)
         setIsPaymentVisible(true)
         submitToDatabase()
     }
@@ -124,19 +125,19 @@ const PersonalDetails = () => {
           <h3>Membership Information</h3>
 
         <form className="ship-form " onSubmit={handleSubmit}>
-                    <input name="firstname" className="form-control"  ref={register({ required: true })} placeholder="First Name"/>
+                    <input name="firstName" className="form-control"  onChange={handleChange} ref={register({ required: true })} placeholder="First Name"/>
                     {errors.firstname && <span className="error">First Name is required</span>}<br/>
 
-                    <input name="lastname" className="form-control"  ref={register({ required: true })} placeholder="Last Name"/>
+                    <input name="lastName" className="form-control" onChange={handleChange} ref={register({ required: true })} placeholder="Last Name"/>
                     {errors.lastname && <span className="error">Last Name is required</span>}<br/>
 
-                    <input name="email" className="form-control" ref={register({ required: true })} placeholder="Email" />
+                    <input name="email" className="form-control" onChange={handleChange} ref={register({ required: true })} placeholder="Email" />
                     {errors.email && <span className="error">Email is required</span>}<br/>
 
-                    <input name="phone" className="form-control" ref={register({ required: true })} placeholder="Mobile Number" />
+                    <input name="mobile" className="form-control" onChange={handleChange} ref={register({ required: true })} placeholder="Mobile Number" />
                     {errors.phone && <span className="error">Phone Number is required</span>}<br/>
 
-                    <input name="date" type="date" className="form-control"  ref={register({ required: true })} placeholder="Date of Birth : dd/mm/yy" />
+                    <input name="dob" type="date" className="form-control" onChange={handleChange} ref={register({ required: true })} placeholder="Date of Birth : dd/mm/yy" />
                     {errors.date && <span className="error">Date is required</span>}<br/>
 
                     <select name="gender" className="form-control" onChange={handleChange} id="cars" ref={register({ required: true })} placeholder="Gender" >
@@ -146,7 +147,7 @@ const PersonalDetails = () => {
                     </select>
                     {errors.gender && <span className="error">Gender is required</span>}<br/>
 
-                    <input name="address" className="form-control"  ref={register({ required: true })} placeholder="Your Address" />
+                    <input name="address" className="form-control" onChange={handleChange} ref={register({ required: true })} placeholder="Your Address" />
                     {errors.address && <span className="error">Address is required</span>}<br/>
 
                     <button className="btn btn-primary form-control" type="submit" >Next</button>
@@ -154,10 +155,10 @@ const PersonalDetails = () => {
                 </div>
 
                 <div  className="col-md-6">
-                    <div style={{marginTop: '200px', display: membershipId ? 'block' : 'none'}}>
+                    <div style={{marginTop: '200px'}}>
                         <h3>Payment Information</h3>
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm handlePlaceOrder={handlePlaceOrder}></CheckoutForm>
+                    <CheckoutForm handlePlaceOrder={membershipId} handlePayment={handlePayment}></CheckoutForm>
                 </Elements>
                 <br/>
                 {

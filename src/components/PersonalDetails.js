@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import CheckoutForm from './CheckoutForm';
+import ReactGA from 'react-ga';
 
 const PersonalDetails = () => {
     const { register,  errors } = useForm();
@@ -18,6 +19,12 @@ const PersonalDetails = () => {
     const [membershipType, setMembershipType] = useState(null)  //set this taking props from pricing page
 
 
+    const registrationEvent = ()=>{
+        ReactGA.event({
+            category: 'Membership form',
+            action: 'Filled up membership form'
+        })
+    }
 
     // const onSubmit = data => { 
     //     setMembershipInfo(data);
@@ -69,6 +76,7 @@ const PersonalDetails = () => {
         setMembershipType(key)
         setIsPaymentVisible(true)
         submitToDatabase()
+
     }
     
 
@@ -93,6 +101,7 @@ const PersonalDetails = () => {
         .then((res)=>{
             console.log("data has been sent")
             setMembershipId(res.data.id)
+            registrationEvent()
             
         })
         .catch(()=>{

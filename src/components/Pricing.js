@@ -2,9 +2,19 @@ import React from 'react';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
+import ReactGA from 'react-ga';
+
+
+
 const Pricing = () => {
     
-
+    const purchaseEvent = (type)=>{
+        ReactGA.event({
+            category: 'Plan Selection',
+            action: type
+        })
+    }
+    
     return (
         <div className="pricing">
             <div className="header">
@@ -42,7 +52,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Advanced Plan"}>
-                        <button>PURCHASE</button>
+                        <button onClick={purchaseEvent('Advanced Plan')}>PURCHASE</button>
                     </Link> 
                 </div>
 
@@ -58,7 +68,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Basic Plan"}>
-                    <button>PURCHASE</button>
+                    <button onClick={purchaseEvent('Basic Plan')} >PURCHASE</button>
                     </Link>
                 </div>
 
@@ -74,7 +84,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Beginner"}>
-                    <button>PURCHASE</button>
+                    <button onClick={purchaseEvent('Beginner Plan')}>PURCHASE</button>
                     </Link>
                 </div>
             </div>

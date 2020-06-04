@@ -8,10 +8,22 @@ import ReactGA from 'react-ga';
 
 const Pricing = () => {
     
-    const purchaseEvent = (type)=>{
+    const beginnerEvent = ()=>{
         ReactGA.event({
             category: 'Plan Selection',
-            action: type
+            action: 'Beginner Plan'
+        })
+    }
+    const basicEvent = ()=>{
+        ReactGA.event({
+            category: 'Plan Selection',
+            action: 'Basic Plan'
+        })
+    }
+    const advanceEvent = ()=>{
+        ReactGA.event({
+            category: 'Plan Selection',
+            action: 'Advance Plan'
         })
     }
     
@@ -52,7 +64,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Advanced Plan"}>
-                        <button onClick={purchaseEvent('Advanced Plan')}>PURCHASE</button>
+                        <button onClick={advanceEvent}>PURCHASE</button>
                     </Link> 
                 </div>
 
@@ -68,7 +80,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Basic Plan"}>
-                    <button onClick={purchaseEvent('Basic Plan')} >PURCHASE</button>
+                    <button onClick={basicEvent} >PURCHASE</button>
                     </Link>
                 </div>
 
@@ -84,7 +96,7 @@ const Pricing = () => {
                         <p>&#10003; Happy Customers</p>
                     </div>
                     <Link to={"/personalDetails/"+"Beginner"}>
-                    <button onClick={purchaseEvent('Beginner Plan')}>PURCHASE</button>
+                    <button onClick={beginnerEvent}>PURCHASE</button>
                     </Link>
                 </div>
             </div>

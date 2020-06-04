@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactGA from 'react-ga';
+import axios from 'axios';
 import {
   CardElement,
   useStripe,
@@ -11,13 +12,34 @@ const CheckoutForm = (props) => {
     const [paymentFinished, setPaymentFinished] = useState(null);
     const stripe = useStripe();
     const elements = useElements();
-
+    const membershipId = props.membershipId
     const paymentEvent = ()=>{
       ReactGA.event({
           category: 'Payment',
           action: 'Paid'
       })
   }
+
+    const updateDatabase = ()=>{
+      const payLoad = payment
+      axios({
+          url:`https://power-gym-server.herokuapp.com/api/save/${membershipId}`,
+          method:'PUT',
+          data: payLoad
+          
+      })
+      .then((res)=>{
+          console.log("data has been updated")
+          
+      })
+      .catch(()=>{
+          console.log("Couldn't update the data")
+      })
+  }
+
+
+
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -33,6 +55,7 @@ const CheckoutForm = (props) => {
         const payment = {id: paymentMethod.id, last4: paymentMethod.card.last4}
         //props.handlePlaceOrder(payment);
         setPaymentError(null);
+        updateDatabase()
         paymentEvent()
     }
   };

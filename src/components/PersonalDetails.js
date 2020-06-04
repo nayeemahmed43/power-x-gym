@@ -167,7 +167,7 @@ const PersonalDetails = () => {
                     <div style={{marginTop: '200px'}}>
                         <h3>Payment Information</h3>
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm handlePlaceOrder={membershipId} handlePayment={handlePayment}></CheckoutForm>
+                    <CheckoutForm membershipId={membershipId} handlePayment={handlePayment}></CheckoutForm>
                 </Elements>
                 <br/>
                 {

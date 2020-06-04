@@ -20,9 +20,9 @@ const CheckoutForm = (props) => {
       })
   }
 
-    const updateDatabase = (payment)=>{
+    const updateDatabase = ()=>{
       const payLoad = {
-        payment : payment
+        payment : 'Paid'
       }
       axios({
           url:`https://power-gym-server.herokuapp.com/api/save/${membershipId}`,
@@ -58,7 +58,7 @@ const CheckoutForm = (props) => {
         //props.handlePlaceOrder(payment);
         setPaymentError(null);
         updateDatabase()
-        paymentEvent(payment)
+        paymentEvent()
     }
   };
 

@@ -59,7 +59,7 @@ const PersonalDetails = () => {
         dob : '',
         gender:'',
         address:'',
-        payment:''
+        payment:'Pending'
     }
     const handleChange = (e)=>{
         memberData[e.target.name] = e.target.value

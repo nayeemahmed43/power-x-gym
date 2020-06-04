@@ -11,6 +11,13 @@ const CheckoutForm = (props) => {
     const stripe = useStripe();
     const elements = useElements();
 
+    const paymentEvent = ()=>{
+      ReactGA.event({
+          category: 'Payment',
+          action: 'Paid'
+      })
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const {error, paymentMethod} = await stripe.createPaymentMethod({
@@ -25,6 +32,7 @@ const CheckoutForm = (props) => {
         const payment = {id: paymentMethod.id, last4: paymentMethod.card.last4}
         //props.handlePlaceOrder(payment);
         setPaymentError(null);
+        paymentEvent()
     }
   };
 
